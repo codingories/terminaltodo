@@ -15,10 +15,8 @@ program.
 program.
 command('clear')
   .description('clear all tasks')
-  .action((...args)=>{
-    // const words = args.slice(0,-1).join(' ')
-    // console.log(words);
-    console.log('this is clear')
+  .action(()=>{
+    api.clear()
 })
 
 program.parse(process.argv);

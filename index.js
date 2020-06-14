@@ -9,3 +9,6 @@ module.exports.add = async (title)=>{
   // 储存任务到文件
   await db.write(list) // 面向接口编程,这里最好写一下await，因为我们要确保这里的异步等结束
 }
+module.exports.clear = async (title) => {
+  await db.write([])
+}
