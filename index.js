@@ -17,6 +17,6 @@ module.exports.showAll = async ()=> {
   const list = await db.read()
   // 打印之前的任务
   list.forEach((task, index)=>{
-    console.log(`${index + 1} - ${task.title}`)
+    console.log(`${task.done ? '[x]':'[_]' } ${index + 1} - ${task.title}`)
   })
 }

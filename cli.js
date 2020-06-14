@@ -18,7 +18,6 @@ command('clear')
 })
 
 // process.argv, 用来判断传入的参数有哪些
-console.log('process.argv.length', process.argv.length)
 if(process.argv.length === 2){
   void api.showAll() // async 默认返回promise, 可以用void强制去除下划线
 }
