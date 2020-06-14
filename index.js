@@ -1,38 +1,11 @@
-const homedir = require('os').homedir();  // /Users/ories
-const home = process.env.HOME || homedir;  // /Users/ories,process.env.HOME 用户配置过的环境
-const p = require('path')
-const fs = require('fs')
-const dbPath = p.join(home, '.todo')
+const db = require('./db.js')
 
-module.exports.add = (title)=>{
+
+module.exports.add = async (title)=>{
   // 读取之前的任务
-  fs.readFile(dbPath, {flag: 'a+'}, (error,data)=>{
-    if (error) {console.log(error)} else {
-      let list
-      try{
-        list = JSON.parse(data.toString())
-      }catch(error2) {
-        list = []
-      }
-      console.log(list)
-      const task = {
-        title:title,
-        done: false
-      }
-      list.push(task)
-      const string = JSON.stringify(list)
-      fs.writeFile(dbPath, string+'\n',(error3)=>{
-        if(error3){
-          console.log(error3)
-        }
-      })
-    }
-
-
-  })
-
-
+  const list = await db.read() // await 表示异步拿到promise结果 前面必须加async
   // 往里面添加一个 title 任务
-
+  list.push({title, done:false})
   // 储存任务到文件
+  await db.write(list) // 面向接口编程,这里最好写一下await，因为我们要确保这里的异步等结束
 }
