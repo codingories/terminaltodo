@@ -27,6 +27,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.18.1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v10.18.1/bin/node" />
@@ -60,7 +65,7 @@
       <workItem from="1592008453184" duration="1245000" />
       <workItem from="1592019481663" duration="2899000" />
       <workItem from="1592109375861" duration="3978000" />
-      <workItem from="1592139069663" duration="4013000" />
+      <workItem from="1592139069663" duration="5170000" />
     </task>
     <servers />
   </component>

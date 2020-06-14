@@ -50,20 +50,9 @@ function askForAction(list, index){
       {name: '删除', value: 'remove'},
     ]
   }).then(answer2=>{
-    switch (answer2.action) {
-      case 'markAsDone':
-        markAsDone(list, index)
-        break;
-      case 'markAsUndone':
-        markAsUndone(list, index)
-        break;
-      case 'updateTitle':
-        updateTitle(list, index)
-        break;
-      case 'remove':
-        remove()
-        break
-    }
+    const actions = {markAsDone,markAsUndone,updateTitle,remove}
+      const action = actions[answer2.action]
+      action && action(list, index)
   })
 }
 
