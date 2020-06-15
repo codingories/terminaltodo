@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38ef5c6f-aecd-480f-b00b-4e1e24e64c77" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/__mocks__/fs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/db.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/02todoterminal.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/02todoterminal.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__mocks__/fs.js" beforeDir="false" afterPath="$PROJECT_DIR$/__mocks__/fs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/db.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/db.spec.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +134,7 @@
       <workItem from="1592139069663" duration="6553000" />
       <workItem from="1592146811865" duration="420000" />
       <workItem from="1592225987446" duration="143000" />
-      <workItem from="1592226203263" duration="4198000" />
+      <workItem from="1592226203263" duration="6249000" />
     </task>
     <servers />
   </component>
