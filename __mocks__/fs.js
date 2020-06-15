@@ -7,6 +7,7 @@ const mocks = {}
 
 fs.setMock = (path,error,data)=>{
   mocks[path] = [error, data] // 返回
+  // mocks['/xxx'] = null, [{title:'hi',done:true}]
 }
 
 fs.readFile= (path, options, callback)=>{ // 覆盖原来的
