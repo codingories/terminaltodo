@@ -14,7 +14,7 @@ fs.readFile = (path, options, callback)=>{ // 覆盖原来的
   // fs.readFile('xxx',fn)
   if(callback === undefined){callback = options}
   if(path in readMocks) {
-    // callback(mocks[path][0],mocks[path][1]) // 如果发现是被mock过的就不走真正的readfile
+    // callback(mocks[path][0],mocks[path][1]) // 如果发现是被mock过的就不走真正的readFile
     callback(...readMocks[path])
   }else {
     _fs.readFile(path, options, callback)
@@ -33,7 +33,7 @@ fs.writeFile = (path, data, options, callback)=>{
   if(path in writeMocks){
     writeMocks[path](path, data, options, callback)
   } else {
-    _fs.writeFile(path, data, options, callback) // 其实就是调用真正的readfile还是mock
+    _fs.writeFile(path, data, options, callback) // 其实就是调用真正的readFile还是mock
   }
 }
 
