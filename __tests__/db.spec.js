@@ -3,6 +3,9 @@ const fs = require('fs') // 这个是真的fs
 jest.mock('fs') // 这里变成了假的fs,第一步在测试的地方mock
 
 describe('db',()=>{ // describe 描述一个东西
+  afterEach(()=>{
+    fs.clearMocks()
+  })
   it('can read', async ()=>{ // it 它能做什么
       // expect(db.read instanceof Function).toBe(true) // expect 也要非常熟悉
     const data = [{title:'hi',done:true}]

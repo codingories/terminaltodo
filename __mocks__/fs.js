@@ -3,7 +3,7 @@ const _fs = jest.requireActual('fs'); // 以前实际的模块
 
 Object.assign(fs, _fs) // 把_fs key 值 复制 到左边
 
-const readMocks = {}
+let readMocks = {}
 
 fs.setReadFileMock = (path,error,data)=>{
   readMocks[path] = [error, data] // 返回
@@ -21,7 +21,7 @@ fs.readFile = (path, options, callback)=>{ // 覆盖原来的
   }
 }
 
-const writeMocks = {}
+let writeMocks = {}
 
 fs.setWriteFileMock = (path, fn)=>{ // fn 表示该函数应该做什么
   writeMocks[path] = fn
@@ -35,6 +35,11 @@ fs.writeFile = (path, data, options, callback)=>{
   } else {
     _fs.writeFile(path, data, options, callback) // 其实就是调用真正的readFile还是mock
   }
+}
+
+fs.clearMocks = ()=>{
+  readMocks = {}
+  writeMocks = {}
 }
 
 module.exports = fs
