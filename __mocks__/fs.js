@@ -24,9 +24,7 @@ fs.readFile = (path, options, callback)=>{ // 覆盖原来的
 const writeMocks = {}
 
 fs.setWriteFileMock = (path, fn)=>{ // fn 表示该函数应该做什么
-  console.log('setWriteFileMock',path,fn)
   writeMocks[path] = fn
-  console.log(',shit',writeMocks)
 }
 
 
